@@ -1,0 +1,14 @@
+{
+  "name": "test Codespace",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "runArgs": ["--shm-size=1g"],
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
