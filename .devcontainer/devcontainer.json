@@ -1,0 +1,22 @@
+{
+  "name": "test-headless-chrome",
+  "build": {
+    "dockerFile": "Dockerfile",
+    "context": ".."
+  },
+  "containerEnv": {
+    "CHROME_BIN": "/usr/bin/google-chrome",
+    "PUPPETEER_SKIP_DOWNLOAD": "true"
+  },
+  "remoteEnv": {
+    "CHROME_BIN": "/usr/bin/google-chrome"
+  },
+  "postCreateCommand": "echo 'Google Chrome is ready for headless use. Example: google-chrome --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --dump-dom https://example.com'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}
